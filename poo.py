@@ -16,7 +16,10 @@ class busqueda:
         return 'Archivo leido correctamente'
 
     def buscar(self):
-        nombre = input("ingrese el nombre del libro: ")
+        if len(self.resultados) != 0:
+            self.resultados.clear()
+
+        nombre = input(f"ingrese el {self.filtro} del libro: ")
         for fila in self.lista_libros:
             if fila[str(self.filtro)].lower() == nombre.lower():
                 self.resultados.append(fila)
@@ -28,7 +31,7 @@ class busqueda:
                     print(f"{k}: {v}")
                 print("-"*50)
 
-bus = busqueda()
+bus = busqueda('autor')
 print(bus.leer_archivo())
 bus.buscar()
 
