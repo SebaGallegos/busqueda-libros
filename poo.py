@@ -1,4 +1,4 @@
-import csv
+from csv import DictReader
 
 class busqueda:
 
@@ -9,7 +9,7 @@ class busqueda:
 
     def leer_archivo(self):
         with open("lista_libros.csv", "r", newline = "") as archivo:
-            leer_archivo = csv.DictReader(archivo)
+            leer_archivo = DictReader(archivo)
             for fila in leer_archivo:
                 self.lista_libros.append(fila)
         
