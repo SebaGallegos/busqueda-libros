@@ -28,7 +28,7 @@ class busqueda:
             print("-"*50)
             for i in range(len(self.resultados)):
                 for k,v in self.resultados[i].items():
-                    print(f"{k}: {v}")
+                    print(f"{k.capitalize()}: {v}")
                 print("-"*50)
 
 bus = busqueda('autor')
