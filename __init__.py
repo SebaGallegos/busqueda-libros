@@ -1,4 +1,4 @@
-from poo import busqueda
+from busqueda import busqueda
 
 def main():
     bus = busqueda()
